@@ -1,0 +1,22 @@
+{
+	"nif":"70844523Z",
+	"name":"Angélica",
+	"surname":"Guamán",
+	"age":27,
+	"sexo":"M",
+	"casado":true,
+	"numHijos":0,
+	"embarazada":false,
+	"coberturas":{
+		"oftalmologia":false,
+		"dental":true,
+		"fecundacionInVitro":true
+	},
+	"illnesses":{
+		"heart":false,
+		"estomacal":true,
+		"rinones":true,
+		"alergia":true,
+		"nameAlergia":"polem"
+	}
+}

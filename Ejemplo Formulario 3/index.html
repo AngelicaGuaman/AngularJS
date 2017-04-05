@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+ 
+  <body ng-controller="FormController">
+	<form role="form">
+		<div class="seguro-medico">
+			<label for="nif">NIF:</label>
+			<input id="nif" name="nif" type="text" ng-model="seguro.nif"><br>
+		
+			<label for="name">Nombre:</label>
+			<input id="name" name="name" type="text" ng-model="seguro.name"><br>
+			
+			<label for="surname">Apellido:</label>
+			<input id="surname" name="surname" type="text" ng-model="seguro.surname"><br>
+
+			<label for="age">Edad:</label>
+			<input id="age" name="age" type="text" ng-model="seguro.age"><br>
+
+			<label for="sexo">Sexo:</label>
+			<select id="sexo" name="sexo" type="checkbox" ng-model="seguro.sexo">
+				<option value="">--Elige una opcion--</option>
+				<option value="H">Hombre</option>
+				<option value="M">Mujer</option>
+			</select><br>
+			
+			<label for="casado">Casado</label>
+			<input id="casado" name="casado" type="checkbox" ng-model="seguro.casado"><br>
+
+			<label for="numHijos">Nº Hijos:</label>
+			<input id="numHijos" name="numHijos" type="text" ng-model="seguro.numHijos"><br>
+
+			<label for="embarazada">Embarazada</label>
+			<input ng-disabled="seguro.sexo!=='M'" id="embarazada" name="embarazada" type="checkbox" ng-model="seguro.embarazada"><br>
+
+			<label for="fechaCreacion">Fecha de creación</label>
+			<input id="fechaCreacion" name="fechaCreacion" type="text" ng-model="seguro.fechaCreacion"><br>
+		</div>
+		<div class="coberturas">
+			<label for="oftalmologia">Oftalmología</label>
+			<input id="oftalmologia" name="oftalmologia" type="checkbox" ng-model="seguro.oftalmologia"><br>
+
+			<label for="dental">Dental</label>
+			<input id="dental" name="dental" type="checkbox" ng-model="seguro.dental"><br>
+
+			<label ng-show="seguro.sexo==='M'" for="fecundacionInVitro">Fecundación In Vitro</label>
+			<input ng-show="seguro.sexo==='M'" id="fecundacionInVitro" name="fecundacionInVitro" type="checkbox" ng-model="seguro.fecundacionInVitro"><br>
+		</div>
+		<div class="illnesses">
+			<label for="heart">Corazón</label>
+			<input id="heart" name="heart" type="checkbox" ng-model="seguro.heart"><br>
+
+			<label for="dental">Estomacal</label>
+			<input id="estomacal" name="estomacal" type="checkbox" ng-model="seguro.estomacal"><br>
+
+			<label for="rinhones">Riñones</label>
+			<input id="rinhones" name="rinhones" type="checkbox" ng-model="seguro.rinhones"><br>
+
+			<label for="alergia">Alergia</label>
+			<input id="alergia" name="alergia" type="checkbox" ng-model="seguro.alergia"><br>
+
+			<label for="nameAlergia">Nombre de la alergia</label>
+			<input ng-disabled="seguro.alergia===false" id="nameAlergia" name="nameAlergia" type="text" ng-model="seguro.nameAlergia"><br>
+		</div>
+		
+	</form>
+  </body>
+ 
+</html>
