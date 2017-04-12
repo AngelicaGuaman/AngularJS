@@ -1,6 +1,9 @@
 var app=angular.module("app",[]);
   
-app.controller('AlumnosController',['$scope', function($scope){
+app.controller('AlumnosController',['$scope', '$log', function($scope, $log){
+
+	$scope.formVisibility=false;
+
 	$scope.alumnos = [ //modelo
 		{nombre: "Robinson Ganchala", telefono:"123456789", curso: "Cuarto"	},
 		{nombre: "Juan Carlos García", telefono:"987654321", curso: "Cuarto" },
@@ -18,5 +21,11 @@ app.controller('AlumnosController',['$scope', function($scope){
 	{
 		$scope.alumnos.push($scope.nuevoAlumno);
 		$scope.nuevoAlumno={};
+		$scope.formVisibility=false;
+	};
+
+	$scope.showForm = function(){
+		$scope.formVisibility=true;
+		console.log($scope.formVisibility);
 	};
 }]); 
