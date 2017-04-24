@@ -2,8 +2,17 @@
 
 var app = angular.module('tareasApp');
 
-app.controller('MainCtrl', ['$scope',function($scope) {
-    $scope.tareas = [];
+app.controller('MainCtrl', ['$scope', 'localStorageService', function($scope, localStorageService) {
+    
+    var tareasEnAlmacen = localStorageService.get('tareas');
+
+    $scope.tareas = tareasEnAlmacen && tareasEnAlmacen.split('\n') || [];
+
+    //listener de angular
+    //para vigilar los cambios que se producen en tareas (añaden o borran)
+    $scope.$watch('tareas', function (){
+        localStorageService.add('tareas', $scope.tareas.join('\n'));
+    });
 
     $scope.addTarea = function (){
     	$scope.tareas.push($scope.tarea);

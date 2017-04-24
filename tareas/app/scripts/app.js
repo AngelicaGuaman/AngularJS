@@ -18,8 +18,15 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.sortable'
+    'ui.sortable',
+    'LocalStorageModule'
   ])
+
+  //Prefijos para el almacenamiento local, para asegurarnos que no coja datos/variables de otra app
+  .config(['localStorageServiceProvider', function (localStorageServiceProvider){
+    localStorageServiceProvider.setPrefix('ls');
+  }])
+  
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
