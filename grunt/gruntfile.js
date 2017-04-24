@@ -18,6 +18,15 @@ module.exports = function(grunt) {
   				src:'unidos.js',
   				dest:'build/unidos.min.js'
   			}
+  		},
+  		shell:{
+  			multiple:{
+  				command:[
+  				'rm unidos.js',
+  				'mkdir deploy',
+  				'move build/unidos.min.js deploy/unidos.min.js'
+  				].join('&&') //para que se ejecuten varios script
+  			}
   		}
   	});
 
@@ -25,7 +34,7 @@ module.exports = function(grunt) {
  	grunt.loadNpmTasks('grunt-contrib-jshint');
  	grunt.loadNpmTasks('grunt-contrib-concat');
  	grunt.loadNpmTasks('grunt-contrib-uglify');
-
+ 	grunt.loadNpmTasks('grunt-shell');
   	// Default task(s).
-  	grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  	grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'shell']);
 };
