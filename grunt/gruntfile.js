@@ -24,7 +24,7 @@ module.exports = function(grunt) {
   				command:[
   				'rm unidos.js',
   				'mkdir deploy',
-  				'move build/unidos.min.js deploy/unidos.min.js'
+  				'mv build/unidos.min.js deploy/unidos.min.js'
   				].join('&&') //para que se ejecuten varios script
   			}
   		}
