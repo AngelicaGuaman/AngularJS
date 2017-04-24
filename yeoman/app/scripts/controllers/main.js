@@ -7,11 +7,14 @@
  * # MainCtrl
  * Controller of the yeomanApp
  */
-angular.module('yeomanApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+var app = angular.module('yeomanApp');
+
+app.controller('MainCtrl', ['$scope', function ($scope) {
+    	$scope.awesomeThings = [ //modelo
+      		'HTML5 Boilerplate',
+      		'AngularJS',
+      		'Karma',
+      		'E2E',
+      		'Protractor',
+    	];
+  	}]);
