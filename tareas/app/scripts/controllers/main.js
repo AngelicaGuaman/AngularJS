@@ -3,12 +3,7 @@
 var app = angular.module('tareasApp');
 
 app.controller('MainCtrl', ['$scope',function($scope) {
-    $scope.tareas = [
-      'Item1',
-      'Item2',
-      'Item3',
-      'Item4'
-    ];
+    $scope.tareas = [];
 
     $scope.addTarea = function (){
     	$scope.tareas.push($scope.tarea);
