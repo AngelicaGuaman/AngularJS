@@ -19,6 +19,8 @@ bower install --save angular-bootstrap  --> https://bower.io/docs/api/#install-o
 
 grunt serve
 
+Para añadir una nueva vista: yo angular:route articulos
+
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.
