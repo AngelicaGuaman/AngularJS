@@ -22,7 +22,7 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/', { //index
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
