@@ -7,6 +7,18 @@ version 0.16.0.
 
 Run `grunt` for building and `grunt serve` for preview.
 
+mkdir prototipoYeoman && cd prototipoYeoman
+
+yo angular
+
+npm install
+
+npm install -g generator-angular
+
+bower install --save angular-bootstrap  --> https://bower.io/docs/api/#install-options
+
+grunt serve
+
 ## Testing
 
 Running `grunt test` will run the unit tests with karma.

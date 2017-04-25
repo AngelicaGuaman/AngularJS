@@ -1,3 +1,15 @@
+<div>
+  <div uib-carousel active = "active" interval="setInterval" no-wrap="noWrapSlides">
+    <div uib-slide ng-repeat="slide in slides" index="slide.id">
+      <img class="carousel-image" ng-src="{{slide.image}}" style="margin:auto;">
+      <div class="carousel-caption">
+        <h2>{{slide.title}}</h2>
+        <p>{{slide.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="jumbotron">
   <h1>'Allo, 'Allo!</h1>
   <p class="lead">
